@@ -1,3 +1,8 @@
+'''
+Este modulo serve para configurar a exibicao das
+ tabelas na pagina admin do Django
+'''
+
 from django.contrib import admin
 from contact import models
 
@@ -14,3 +19,10 @@ class ContactAdmin(admin.ModelAdmin):
     search_fields = 'id', 'first_name', 'last_name',
     list_max_show_all = 100
     list_per_page = 10
+    list_display_link = 'phone', 'first_name', 'last_name'
+
+
+@admin.register(models.Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = 'name',
+    ordering = '-id',

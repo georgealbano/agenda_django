@@ -128,6 +128,15 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'base_static'
 ]
+
+# pasta que vai ser referenciada pelo servidor de arquivos estaticos
+STATIC_ROOT = BASE_DIR / 'static'
+
+MEDIA_URL = 'media/'
+
+# pasta de arquivos enviados pelo usuario
+MEDIA_ROOT = BASE_DIR / 'media/'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
