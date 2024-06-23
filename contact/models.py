@@ -30,7 +30,7 @@ class Contact(models.Model):
     email = models.EmailField(max_length=254, blank=True)
     created_date = models.DateTimeField(default=timezone.now)
     # campo descrição do cadastro
-    descripition = models.TextField(blank=True)
+    description = models.TextField(blank=True)
     # exibe o registro
     show = models.BooleanField(default=True)
     # usuario pode inserir uma imagem
